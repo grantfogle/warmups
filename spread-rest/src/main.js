@@ -12,8 +12,9 @@ exports.calculateArrayMax = function(arr) {
 
 Re-write calculateArrayMax using the spread operator instead of apply.
 */
-exports.calculateArrayMax = function(arr) {
+exports.calculateArrayMax = function (arr) {
   //add code
+  return Math.max(...arr)
 }
 
 /*
@@ -27,8 +28,9 @@ exports.combineArrays = function(arr1, arr2) {
 Rewrite combineArrays to use the spread operator.
 */
 
-exports.combineArrays = function(arr1, arr2) {
+exports.combineArrays = function (arr1, arr2) {
   //add code
+  return [...arr1, ...arr2]
 }
 
 /*
@@ -42,8 +44,9 @@ exports.skipFirstThree = function(arr) {
 Rewrite skipFirstThree to use the spread operator.
 */
 
-exports.skipFirstThree = function(arr) {
+exports.skipFirstThree = function (arr) {
   //add code
+  return [...arr].slice(3)
 }
 
 /*
@@ -54,6 +57,7 @@ an indefinite number of arguments as an array.
 Map (x 2) over all parameters beyond the first two, a and b.
 */
 
-exports.allOthersMapTimesTwo = function(a, b, ...others) {
+exports.allOthersMapTimesTwo = function (a, b, ...others) {
   //add code
+  return [...others].map(other => other * 2)
 }
